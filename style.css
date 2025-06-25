@@ -162,12 +162,13 @@ input:checked ~ .slide {
   font-family: 'Playfair Display', serif;
   font-weight: 100;
   font-size: 2.5rem;
-  line-height: 0.5;
-  margin-top: 5px;
+  line-height: 1.2; /* Adjust line-height to prevent overlap */
+  margin-top: 20px; /* Add spacing above the heading */
+  margin-bottom: 10px; /* Add spacing below the heading */
   color: #F1E6D5;
   opacity: 0;
   animation: slidebottom 1s ease forwards;
-  animation-delay: .4s;
+  animation-delay: 0.4s;
 
 }
 
@@ -204,7 +205,7 @@ input:checked ~ .slide {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0px;
   font-size: 40px;
-  font-style: italic;
+  font-style: popins;
   font-weight: 500;
   color:  #F1E6D5;
 }
@@ -288,7 +289,7 @@ body {
   font-size: 35px;
   font-weight: 600;
   margin-bottom: 10px;
-  font-style: italic;
+  font-style: popins;
 }
 
 .about-right h3 {
@@ -364,11 +365,11 @@ section {
 .sub-title {
   text-align: center; /* Center the text horizontally */
   font-size: 2.5rem; /* Adjust font size for better visibility */
-  font-weight: 600; /* Make the text bold */
+  font-weight: 500; /* Make the text bold */
   margin-bottom: 50px; /* Add spacing below the title */
   color:   #F1E6D5; /* Optional: Adjust text color */
   font-size: 50px;
-  font-style: italic;
+  font-style: popins;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -396,7 +397,6 @@ section {
 }
 /* --- Headings --- */
 .heading1 {
-  display: flex;
   text-align: center;
   text-decoration: underline;
   text-underline-offset: 10px;
@@ -513,8 +513,8 @@ section {
   justify-items: center; /* Center items horizontally */
   align-items: center; /* Center items vertically */ 
   width: 100%; 
-  margin-left: 20px;
-  margin-top: 10px;
+  margin-left: 90px;
+  margin-top: 20px;
 }
 
 .radial-bars .radial-bar{
@@ -592,19 +592,34 @@ section {
     color: #F1E6D5;
    }
    .radial-bars .text {                                                            
-    width:100%;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Ensure it spans the full width */
     position: absolute;
-    text-align:center;
-    left:5%;
-    bottom:-70%;
-    transform: translateX(-50px);
-    font-size: 17px;
+    text-align: center;
+    bottom: -65px; /* Adjust positioning relative to the radial bar */
+    font-size: 17px; /* Font size for laptop view */
     font-weight: 500;
     white-space: nowrap; 
     animation: showText 0.5s 1s linear forwards;
     opacity: 1;
-    color:  #F1E6D5;
-  }
+    color: #F1E6D5;
+}
+
+/* Responsive styles for mobile view */
+@media (max-width: 768px) {
+    .radial-bars .text {
+      display: flex;
+      justify-content: center;
+      bottom: -70px; /* Adjust positioning for smaller screens */
+      font-size: 19px; /* Reduce font size for mobile view */
+      transform: translateX(-50%); /* Adjust for centering */
+      left:10%;
+      text-align: center;
+      width: auto;
+    }
+}
   /*projects */
   .main-text {
     padding-top:150px;
@@ -615,7 +630,7 @@ section {
     font-weight: 500;
     line-height: 1;
     text-align: center;
-    font-style: italic;
+    font-style: popins;
   font-family: "Montserrat", sans-serif;
   }
   .main-text h2 span{
@@ -713,7 +728,7 @@ section {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0px;
   font-size: 17px;
-  font-style: italic; 
+  font-style: popins; 
   align-items: center;
 }
 
